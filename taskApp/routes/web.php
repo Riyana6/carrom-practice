@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tasks', function () {
+Route::get('/score', function () {
     $data=App\Task::all();
     return view('task')->with('tasks',$data);
 });
