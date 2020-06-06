@@ -82,12 +82,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Daily TaskApp
+                    Carrom Practise
                 </div>
                 <br>
                 <br>
                 <br>
-                <a href="/tasks" class="btn btn-primary">View Tasks</a>
+                <a href="/tasks" class="btn btn-primary">Scores/a>
+                <a href="/tasks" class="btn btn-primary">Leaderboard/a>
 
                 
             </div>
