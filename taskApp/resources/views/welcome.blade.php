@@ -89,8 +89,8 @@
                 <br>
                 <table align="center">
                 <tr>
-                <td><a href="/tasks" class="btn btn-primary">Scores</a></td>
-                <td><a href="/tasks" class="btn btn-primary">Leaderboard</a></td>
+                <td><a href="/score" class="btn btn-primary">Scores</a></td>
+                <td><a href="/score" class="btn btn-primary">Leaderboard</a></td>
                 </tr>
                 </table>
                 

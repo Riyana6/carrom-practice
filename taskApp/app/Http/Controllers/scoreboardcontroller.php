@@ -9,8 +9,8 @@ class scoreboardcontroller extends Controller
     public function store(Request $request){
         $player1=new player1;
         $player2=new player2;
-        $p1score=new player1score;
-        $p2score=new player2score;
+        $player1score=new player1score;
+        $player2score=new player2score;
         $this->validate($request,[
             'player1'=>'required',
             'player2'=>'required',
@@ -18,10 +18,10 @@ class scoreboardcontroller extends Controller
             'player2score'=>'required'
             
         ]);
-        $player1->scoreboard=$request->player1;
-        $player2->scoreboard=$request->player2;
-        $player1score->scoreboard=$request->player1score;
-        $player2score->scoreboard=$request->player2score;
+        $player1->player1=$request->player1;
+        $player2->player2=$request->player2;
+        $player1score->player1score=$request->player1score;
+        $player2score->player2score=$request->player2score;
         $player1->save();
         $player2->save();
         $player1score->save();
