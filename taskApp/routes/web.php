@@ -11,7 +11,7 @@ Route::get('/score', function () {
     return view('task')->with('tasks',$data);
 });
 
-Route::post('/saveTask', 'TaskController@store');
+Route::post('/saveScoreBoard', 'scoreboardcontroller@store');
 
 Route::get('/markascompleted/{id}','TaskController@UpdateTaskAsCompleted');
 
