@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class scoreboardcontroller extends Controller
 {
-    public function store(Request $request){
+   /* public function store(Request $request){
         $player1=new player1;
         $player2=new player2;
         $p1score=new player1score;
@@ -63,6 +63,6 @@ class scoreboardcontroller extends Controller
         $datas=Task::all();
         return view('task')->with('tasks',$datas);
 
-    }
+    }*/
 
 }

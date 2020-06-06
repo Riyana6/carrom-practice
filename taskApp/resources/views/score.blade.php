@@ -22,7 +22,7 @@
                     </div>
                     @endforeach
 
-                    <form method="POST" action="/saveTask">
+                    <form method="POST" action="/saveScoreboard">
                         {{csrf_field()}}
                         <table>
                             <tr>
@@ -54,29 +54,21 @@
 
 
 
-                        @foreach($tasks as $task)
+                        @foreach($scoreboard as $scoreboard)
                         <tr>
-                            <td>{{$task->id}}</td>
-                            <td>{{$task->task}}</td>
+                            <td>{{$scoreboard->id}}</td>
+                            <td>{{$scoreboard->updated_at}}</td>
+                            <td>{{$scoreboard->player1}}</td>
+                            <td>{{$scoreboard->player2}}</td>
+                            <td>{{$scoreboard->player1score}}</td>
+                            <td>{{$scoreboard->player2score}}</td>
+
+                            
 
                             <td>
-                                @if($task->iscompleted)
-                                <button class="btn btn-success">Completed</button>
-                                @else
-                                <button class="btn btn-warning">Not Completed</button>
-                                @endif
-                            </td>
-
-                            <td>
-                                @if(!$task->iscompleted)
-
-                                <a href="/markascompleted/{{$task->id}}" class="btn btn-primary">Mark As Completed</a>
-                                @else
-                                <a href="/markasnotcompleted/{{$task->id}}" class="btn btn-danger">Mark As Not
-                                    Conpleted</a>
-                                @endif
-                                <a href="/deletetask/{{$task->id}}" class="btn btn-warning">Delete</a>
-                                <a href="/updatetask/{{$task->id}}" class="btn btn-success">Update</a>
+                               
+                                <a href="/deletetask/{{$scoreboard->id}}" class="btn btn-warning">Delete</a>
+                                <a href="/updatetask/{{$scoreboard->id}}" class="btn btn-success">Update</a>
 
                             </td>
                         </tr>
