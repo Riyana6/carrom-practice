@@ -87,9 +87,12 @@
                 <br>
                 <br>
                 <br>
-                <a href="/tasks" class="btn btn-primary">Scores/a>
-                <a href="/tasks" class="btn btn-primary">Leaderboard/a>
-
+                <table align="center">
+                <tr>
+                <td><a href="/tasks" class="btn btn-primary">Scores</a></td>
+                <td><a href="/tasks" class="btn btn-primary">Leaderboard</a></td>
+                </tr>
+                </table>
                 
             </div>
         </div>
