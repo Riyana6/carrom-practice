@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class scoreboardcontroller extends Controller
 {
-   /* public function store(Request $request){
+    public function store(Request $request){
         $player1=new player1;
         $player2=new player2;
         $p1score=new player1score;
@@ -18,15 +18,21 @@ class scoreboardcontroller extends Controller
             'player2score'=>'required'
             
         ]);
-        $score->scoreboard=$request->score;
-        $score->save();
+        $player1->scoreboard=$request->player1;
+        $player2->scoreboard=$request->player2;
+        $player1score->scoreboard=$request->player1score;
+        $player2score->scoreboard=$request->player2score;
+        $player1->save();
+        $player2->save();
+        $player1score->save();
+        $player2score->save();
         $data=score::all();
        // dd($data);
-        return view('score')->with('tasks',$data);
+        return view('score')->with('scoreboard',$data);
         //dd($request->all());
     
     }
-
+/*
     public function UpdateTaskAsCompleted($id){
         $score=Task::find($id);
         $score->iscompleted=1;
