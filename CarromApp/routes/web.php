@@ -26,3 +26,4 @@ Route::get('/doubles', function () {
 });
 
 Route::post('/savesingles','singlescontroller@store');
+Route::post('/savedoubles','doublescontroller@store');
