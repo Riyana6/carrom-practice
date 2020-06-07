@@ -24,7 +24,7 @@
 
 
                     <form method="POST" action="/savedoubles">
-
+                    {{csrf_field()}}
                         <table>
                             <tr>
                                 <td>Team1</td>

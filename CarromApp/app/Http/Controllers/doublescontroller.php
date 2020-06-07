@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class doublescontroller extends Controller
 {
-    //
+    public function store(Request $request){
+        dd($request::all());
+    }
 }

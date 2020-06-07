@@ -24,3 +24,5 @@ Route::get('/singles', function () {
 Route::get('/doubles', function () {
     return view('doubles');
 });
+
+Route::post('/savesingles','singlescontroller@store');

@@ -24,7 +24,7 @@
 
 
                     <form method="POST" action="savesingles">
-
+                    {{csrf_field()}}
                         <table>
                             <tr>
                                 <td>Player1</td>
