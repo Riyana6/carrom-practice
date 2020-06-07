@@ -23,7 +23,7 @@
                     </div>
 
 
-                    <form method="POST" action="">
+                    <form method="POST" action="savesingles">
 
                         <table>
                             <tr>
