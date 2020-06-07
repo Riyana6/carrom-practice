@@ -14,7 +14,11 @@ class CreateDoublesTable extends Migration
     public function up()
     {
         Schema::create('doubles', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('team1');
+            $table->string('team2');
+            $table->integer('team1score');
+            $table->integer('team2score');     
             $table->timestamps();
         });
     }

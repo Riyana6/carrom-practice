@@ -14,7 +14,11 @@ class CreateSinglesTable extends Migration
     public function up()
     {
         Schema::create('singles', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('player1');
+            $table->string('player2');
+            $table->integer('player1score');
+            $table->integer('player2score');     
             $table->timestamps();
         });
     }

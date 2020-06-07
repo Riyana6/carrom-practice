@@ -14,7 +14,9 @@ class CreateSingleleaderboardsTable extends Migration
     public function up()
     {
         Schema::create('singleleaderboards', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('player');
+            $table->integer('boardswon');                 
             $table->timestamps();
         });
     }
