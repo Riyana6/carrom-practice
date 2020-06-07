@@ -24,7 +24,9 @@ class singlescontroller extends Controller
         $single->player2score=$request->player2score;
 
         $single->save();
-        return redirect()->back();
+        $data=single::all();
+        return view('singles')->with('singles',$data);
+
 
     }
 }

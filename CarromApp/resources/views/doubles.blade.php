@@ -19,7 +19,7 @@
 
                     @foreach($errors->all() as $error)
                     <div class="alert alert-danger" role="alert">
-
+                        {{$error}}
                     </div>
                     @endforeach
 
@@ -50,7 +50,7 @@
                     </form>
                     </br>
                     <table class="table table-dark">
-                        <th>ID</th>
+                        
                         <th>Date/Time</th>
                         <th>Team1</th>
                         <th>Team2</th>
@@ -60,15 +60,15 @@
                         <th>Action</th>
 
 
-
+                        @foreach($doubles as $doubles)
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            
+                            <td>{{$doubles->created_at}}</td>
+                            <td>{{$doubles->team1}}</td>
+                            <td>{{$doubles->team2}}</td>
+                            <td>{{$doubles->team1score}}</td>
+                            <td>{{$doubles->team2score}}</td>
+                            <td>{{$doubles->winner}}</td>
 
 
                             <td>
@@ -78,6 +78,7 @@
 
                             </td>
                         </tr>
+                        @endforeach
 
                     </table>
 

@@ -18,9 +18,11 @@ class CreateSinglesTable extends Migration
             $table->string('player1');
             $table->string('player2');
             $table->integer('player1score');
-            $table->integer('player2score');     
+            $table->integer('player2score'); 
+                
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -30,6 +32,7 @@ class CreateSinglesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('singles');
+       Schema::dropIfExists('singles');
+        
     }
 }

@@ -18,9 +18,12 @@ class CreateDoublesTable extends Migration
             $table->string('team1');
             $table->string('team2');
             $table->integer('team1score');
-            $table->integer('team2score');     
+            $table->integer('team2score'); 
             $table->timestamps();
+            
         });
+
+        
     }
 
     /**
@@ -31,5 +34,7 @@ class CreateDoublesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('doubles');
+
+       
     }
 }

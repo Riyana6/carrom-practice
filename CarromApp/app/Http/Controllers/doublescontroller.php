@@ -25,7 +25,8 @@ class doublescontroller extends Controller
         $doubles->team2score=$request->team2score;
 
         $doubles->save();
-        return redirect()->back();
-      
+        
+        $data=doubles::all();
+        return view('doubles')->with('doubles',$data);
     }
 }
