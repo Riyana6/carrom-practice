@@ -22,7 +22,7 @@
                     </div>
                     @endforeach
 
-                    <form method="POST" action="/saveScoreBoard">
+                    <form method="POST" action="">
                         {{csrf_field()}}
                         <table>
                             <tr>

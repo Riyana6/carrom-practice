@@ -26,7 +26,7 @@ class scoreboardcontroller extends Controller
         $player2->save();
         $player1score->save();
         $player2score->save();
-        $data=score::all();
+        $data=scoreboard::all();
        // dd($data);
         return view('score')->with('scoreboard',$data);
         //dd($request->all());
