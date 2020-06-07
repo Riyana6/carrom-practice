@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSingleleaderboardsTable extends Migration
+class CreateSinglesleaderboardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateSingleleaderboardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('singleleaderboards', function (Blueprint $table) {
+        Schema::create('singlesleaderboards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('player');
-            $table->integer('boardswon');                 
+            $table->integer('boardswon');
+               
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateSingleleaderboardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('singleleaderboards');
+        Schema::dropIfExists('singlesleaderboards');
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class singleleaderboard extends Model
+class singlesleaderboard extends Model
 {
     //
 }
