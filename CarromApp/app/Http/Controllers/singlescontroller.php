@@ -29,7 +29,7 @@ class singlescontroller extends Controller
     }
 
     public function deletesingle($id){
-        $singles=singles::find($id);
+        $singles=single::find($id);
         $singles->delete();
         return redirect()->back();
 

@@ -51,7 +51,7 @@
                     </form>
                     </br>
                     <table class="table table-dark">
-                        
+
                         <th>Date/Time</th>
                         <th>Player1</th>
                         <th>Player2</th>
@@ -63,7 +63,7 @@
 
                         @foreach($singles as $singles)
                         <tr>
-                            
+
                             <td>{{$singles->created_at}}</td>
                             <td>{{$singles->player1}}</td>
                             <td>{{$singles->player2}}</td>
@@ -76,7 +76,7 @@
                             @endif
                             <td>
 
-                            <a href="/deletesingle/{{$singles->id}}" class="btn btn-warning">Delete</a>
+                                <a href="/deletesingle/{{$singles->id}}" class="btn btn-warning">Delete</a>
                                 <a href="/updatesingle/{{$singles->id}}" class="btn btn-success">Update</a>
 
                             </td>
