@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="text-center">
-            <h1>Single Matches</h1>
+            <h1>Double Matches</h1>
             <div class="row">
                 <div class="col-md-12">
 
@@ -27,20 +27,20 @@
 
                         <table>
                             <tr>
-                                <td>Player1</td>
-                                <td><input type="text" class="form-control" name="player1" /></td>
+                                <td>Team1</td>
+                                <td><input type="text" class="form-control" name="team1" placeholder="Player1/Player2" /></td>
                             </tr>
                             <tr>
-                                <td>Player1 Score</td>
-                                <td><input type="text" class="form-control" name="player1score"></td>
+                                <td>Team1 Score</td>
+                                <td><input type="text" class="form-control" name="team1score" placeholder="Team1 score" ></td>
                             </tr>
                             <tr>
-                                <td>Player2</td>
-                                <td><input type="text" class="form-control" name="player2"></td>
+                                <td>Team2</td>
+                                <td><input type="text" class="form-control" name="team2" placeholder="Player1/Player2"></td>
                             </tr>
                             <tr>
-                                <td>Player2 Score</td>
-                                <td><input type="text" class="form-control" name="player2score" /></td>
+                                <td>Team2 Score</td>
+                                <td><input type="text" class="form-control" name="team2score" placeholder="Team2 score" /></td>
                             </tr>
                         </table>
                         </br>
@@ -52,10 +52,10 @@
                     <table class="table table-dark">
                         <th>ID</th>
                         <th>Date/Time</th>
-                        <th>Player1</th>
-                        <th>Player2</th>
-                        <th>Player1 Score</th>
-                        <th>Player2 Score</th>
+                        <th>Team1</th>
+                        <th>Team2</th>
+                        <th>Team1 Score</th>
+                        <th>Team2 Score</th>
                         <th>Winner</th>
                         <th>Action</th>
 
