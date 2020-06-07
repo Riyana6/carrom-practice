@@ -29,3 +29,8 @@ Route::get('/doubles', function () {
 
 Route::post('/savesingles','singlescontroller@store');
 Route::post('/savedoubles','doublescontroller@store');
+
+Route::get('/deletedouble/{id}','doublescontroller@deletedouble');
+
+
+Route::get('/deletesingle/{id}','singlescontroller@deletesingle');

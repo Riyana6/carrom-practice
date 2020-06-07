@@ -29,4 +29,11 @@ class doublescontroller extends Controller
         $data=doubles::all();
         return view('doubles')->with('doubles',$data);
     }
+
+    public function deletedouble($id){
+        $doubles=doubles::find($id);
+        $doubles->delete();
+        return redirect()->back();
+
+    }
 }

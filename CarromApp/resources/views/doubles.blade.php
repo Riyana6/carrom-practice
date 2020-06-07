@@ -68,7 +68,11 @@
                             <td>{{$doubles->team2}}</td>
                             <td>{{$doubles->team1score}}</td>
                             <td>{{$doubles->team2score}}</td>
-                            <td>{{$doubles->winner}}</td>
+                            @if(($doubles->team1score)>($doubles->team2score))
+                            <td>{{$doubles->team1}}</td>
+                            @else
+                            <td>{{$doubles->team2}}</td>
+                            @endif
 
 
                             <td>

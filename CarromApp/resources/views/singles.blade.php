@@ -76,8 +76,8 @@
                             @endif
                             <td>
 
-                                <a href="" class="btn btn-warning">Delete</a>
-                                <a href="" class="btn btn-success">Update</a>
+                            <a href="/deletesingle/{{$singles->id}}" class="btn btn-warning">Delete</a>
+                                <a href="/updatesingle/{{$singles->id}}" class="btn btn-success">Update</a>
 
                             </td>
                         </tr>

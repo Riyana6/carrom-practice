@@ -26,7 +26,12 @@ class singlescontroller extends Controller
         $single->save();
         $data=single::all();
         return view('singles')->with('singles',$data);
+    }
 
+    public function deletesingle($id){
+        $singles=singles::find($id);
+        $singles->delete();
+        return redirect()->back();
 
     }
 }
