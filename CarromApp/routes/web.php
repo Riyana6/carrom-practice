@@ -18,9 +18,19 @@ Route::get('/', function () {
 });
 
 Route::get('/singles', function () {
-    return view('singles');
+    $data=App\single::all();
+    return view('singles')->with('singles',$data);
 });
 
 Route::get('/doubles', function () {
-    return view('doubles');
+    $data=App\doubles::all();
+    return view('doubles')->with('doubles',$data);
 });
+
+Route::post('/savesingles','singlescontroller@store');
+Route::post('/savedoubles','doublescontroller@store');
+
+Route::get('/deletedouble/{id}','doublescontroller@deletedouble');
+
+
+Route::get('/deletesingle/{id}','singlescontroller@deletesingle');

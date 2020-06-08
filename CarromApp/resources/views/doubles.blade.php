@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  
+
 </head>
 
 <body>
@@ -17,30 +17,34 @@
             <div class="row">
                 <div class="col-md-12">
 
-
+                    @foreach($errors->all() as $error)
                     <div class="alert alert-danger" role="alert">
-
+                        {{$error}}
                     </div>
+                    @endforeach
 
-
-                    <form method="POST" action="">
-
+                    <form method="POST" action="/savedoubles">
+                        {{csrf_field()}}
                         <table>
                             <tr>
                                 <td>Team1</td>
-                                <td><input type="text" class="form-control" name="team1" placeholder="Player1/Player2" /></td>
+                                <td><input type="text" class="form-control" name="team1"
+                                        placeholder="Player1/Player2" /></td>
                             </tr>
                             <tr>
                                 <td>Team1 Score</td>
-                                <td><input type="text" class="form-control" name="team1score" placeholder="Team1 score" ></td>
+                                <td><input type="text" class="form-control" name="team1score" placeholder="Team1 score">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Team2</td>
-                                <td><input type="text" class="form-control" name="team2" placeholder="Player1/Player2"></td>
+                                <td><input type="text" class="form-control" name="team2" placeholder="Player1/Player2">
+                                </td>
                             </tr>
                             <tr>
                                 <td>Team2 Score</td>
-                                <td><input type="text" class="form-control" name="team2score" placeholder="Team2 score" /></td>
+                                <td><input type="text" class="form-control" name="team2score"
+                                        placeholder="Team2 score" /></td>
                             </tr>
                         </table>
                         </br>
@@ -50,7 +54,7 @@
                     </form>
                     </br>
                     <table class="table table-dark">
-                        <th>ID</th>
+
                         <th>Date/Time</th>
                         <th>Team1</th>
                         <th>Team2</th>
@@ -60,24 +64,29 @@
                         <th>Action</th>
 
 
-
+                        @foreach($doubles as $doubles)
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+
+                            <td>{{$doubles->created_at}}</td>
+                            <td>{{$doubles->team1}}</td>
+                            <td>{{$doubles->team2}}</td>
+                            <td>{{$doubles->team1score}}</td>
+                            <td>{{$doubles->team2score}}</td>
+                            @if(($doubles->team1score)>($doubles->team2score))
+                            <td>{{$doubles->team1}}</td>
+                            @else
+                            <td>{{$doubles->team2}}</td>
+                            @endif
 
 
                             <td>
 
-                                <a href="" class="btn btn-warning">Delete</a>
-                                <a href="" class="btn btn-success">Update</a>
+                                <a href="/deletedouble/{{$doubles->id}}" class="btn btn-warning">Delete</a>
+                                <a href="/updatedouble/{{$doubles->id}}" class="btn btn-success">Update</a>
 
                             </td>
                         </tr>
+                        @endforeach
 
                     </table>
 

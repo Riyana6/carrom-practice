@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  
+
 </head>
 
 <body>
@@ -17,14 +17,15 @@
             <div class="row">
                 <div class="col-md-12">
 
-
+                    @foreach($errors->all() as $error)
                     <div class="alert alert-danger" role="alert">
-
+                        {{$error}}
                     </div>
+                    @endforeach
 
 
-                    <form method="POST" action="">
-
+                    <form method="POST" action="savesingles">
+                        {{csrf_field()}}
                         <table>
                             <tr>
                                 <td>Player1</td>
@@ -50,7 +51,7 @@
                     </form>
                     </br>
                     <table class="table table-dark">
-                        <th>ID</th>
+
                         <th>Date/Time</th>
                         <th>Player1</th>
                         <th>Player2</th>
@@ -60,25 +61,27 @@
                         <th>Action</th>
 
 
-
+                        @foreach($singles as $singles)
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
 
-
+                            <td>{{$singles->created_at}}</td>
+                            <td>{{$singles->player1}}</td>
+                            <td>{{$singles->player2}}</td>
+                            <td>{{$singles->player1score}}</td>
+                            <td>{{$singles->player2score}}</td>
+                            @if(($singles->player1score)>($singles->player2score))
+                            <td>{{$singles->player1}}</td>
+                            @else
+                            <td>{{$singles->player2}}</td>
+                            @endif
                             <td>
 
-                                <a href="" class="btn btn-warning">Delete</a>
-                                <a href="" class="btn btn-success">Update</a>
+                                <a href="/deletesingle/{{$singles->id}}" class="btn btn-warning">Delete</a>
+                                <a href="/updatesingle/{{$singles->id}}" class="btn btn-success">Update</a>
 
                             </td>
                         </tr>
-
+                        @endforeach
                     </table>
 
                 </div>
