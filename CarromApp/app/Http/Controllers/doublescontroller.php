@@ -36,7 +36,6 @@ class doublescontroller extends Controller
         return redirect()->back();
 
     }
-<<<<<<< HEAD
 
     public function updatedoubleview($id){
         $doubles=doubles::find($id);
@@ -48,6 +47,4 @@ class doublescontroller extends Controller
         
 
     }
-=======
->>>>>>> d715c1b30da0055c3d6804afbcf0ecef36dd0e3c
 }

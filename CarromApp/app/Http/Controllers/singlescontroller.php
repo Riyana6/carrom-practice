@@ -34,7 +34,6 @@ class singlescontroller extends Controller
         return redirect()->back();
 
     }
-<<<<<<< HEAD
 
     public function updatesingleview($id){
         $singles=single::find($id);
@@ -54,6 +53,4 @@ class singlescontroller extends Controller
         return view('singles')->with('singles',$data);
 
     }
-=======
->>>>>>> d715c1b30da0055c3d6804afbcf0ecef36dd0e3c
 }
