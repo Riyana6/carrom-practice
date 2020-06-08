@@ -41,17 +41,14 @@ class singlescontroller extends Controller
 
     }
 
-    public function updatesingles(Request $request){
-
+    public function updatesingle(Request $request){
+        $id=$request->id;
         $player1=$request->player1;
         $player2=$request->player2;
         $player1score=$request->player1score;
         $player2score=$request->player2score;
 
-        $player1->save();
-        $player2->save();
-        $player1score->save();
-        $player2score->save();
+       
         
         $data=single::find($id);
 

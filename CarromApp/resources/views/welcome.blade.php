@@ -90,8 +90,8 @@
                 <br>
                 <table align="center">
                 <tr>
-                <td><a href="" class="btn btn-primary">Single Matches</a></td>
-                <td><a href="" class="btn btn-primary">Double Matches</a></td>
+                <td><a href="/singles" class="btn btn-primary">Single Matches</a></td>
+                <td><a href="/doubles" class="btn btn-primary">Double Matches</a></td>
                 </tr>
                 </table>
             </div>
