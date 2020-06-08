@@ -43,8 +43,28 @@ class doublescontroller extends Controller
 
     }
 
-    public function updatedouble(Request $request){
+    public function updatedoubles(Request $request){
+
+        $team1=$request->team1;
+        $team2=$request->team2;
+        $team1score=$request->team1score;
+        $team2score=$request->team2score;
+
+        $team1->save();
+        $team2->save();
+        $team1score->save();
+        $team2score->save();
         
+        $data=doubles::find($id);
+
+        $data->team1=$team1;
+        $data->team2=$team2;
+        $data->team1score=$team1score;
+        $data->team2score=$team2score;
+
+        $data->save();
+        $datas=doubles::all();
+        return view('doubles')->with('doubles',$datas);
 
     }
 }

@@ -41,16 +41,28 @@ class singlescontroller extends Controller
 
     }
 
-    public function updatesingle(Request $request){
+    public function updatesingles(Request $request){
 
         $player1=$request->player1;
         $player2=$request->player2;
         $player1score=$request->player1score;
         $player2score=$request->player2score;
 
-        $single->save();
-        $data=single::all();
-        return view('singles')->with('singles',$data);
+        $player1->save();
+        $player2->save();
+        $player1score->save();
+        $player2score->save();
+        
+        $data=single::find($id);
+
+        $data->player1=$player1;
+        $data->player2=$player2;
+        $data->player1score=$player1score;
+        $data->player2score=$player2score;
+
+        $data->save();
+        $datas=single::all();
+        return view('singles')->with('singles',$datas);
 
     }
-}
+} 
