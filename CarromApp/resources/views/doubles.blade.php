@@ -23,7 +23,7 @@
                     </div>
                     @endforeach
 
-                    <form method="POST" action="/savedoubles">
+                    <form method="post" action="/savedoubles">
                         {{csrf_field()}}
                         <table>
                             <tr>

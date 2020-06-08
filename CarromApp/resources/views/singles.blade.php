@@ -24,7 +24,7 @@
                     @endforeach
 
 
-                    <form method="POST" action="savesingles">
+                    <form method="post" action="/savesingles">
                         {{csrf_field()}}
                         <table>
                             <tr>

@@ -15,7 +15,7 @@
         </br>
         </br>
         </br>
-        <form method="POST" action="/updatesingles">
+        <form method="post" action="/updatesingles">
         {{csrf_field()}}
             <table>
                 <tr>

@@ -15,7 +15,7 @@
         </br>
         </br>
         </br>
-        <form method="POST" action="/updatedoubles">
+        <form method="post" action="/updatedoubles">
         {{csrf_field()}}
             <table>
                 <tr>
