@@ -133,7 +133,7 @@
             </br>
 
             <input type="submit" class="btn btn-primary" value="UPDATE">
-            &nbsp;&nbsp; <input type="button" class="btn btn-danger" value="CANCEL">
+            &nbsp;&nbsp;<a href="/doubles" class="btn btn-primary">BACK</a>
 
 
         </form>
