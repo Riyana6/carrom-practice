@@ -17,6 +17,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
 Route::get('/singles', function () {
     $data=App\single::all();
     return view('singles')->with('singles',$data);
@@ -37,3 +41,5 @@ Route::post('/updatedoubles','doublescontroller@updatedouble');
 Route::get('/deletesingle/{id}','singlescontroller@deletesingle');
 Route::get('/updatesingle/{id}','singlescontroller@updatesingleview');
 Route::post('/updatesingles','singlescontroller@updatesingle');
+
+Route::post('/uomlogin','logincontroller@store');
