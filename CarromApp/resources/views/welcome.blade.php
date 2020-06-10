@@ -109,6 +109,7 @@
                 <tr>
                     <td><a href="/singles" class="btn btn-primary">Single Matches</a></td>
                     <td><a href="/doubles" class="btn btn-primary">Double Matches</a></td>
+                    <td><a href="/login" class="btn btn-danger">Logout</a></td>
                 </tr>
             </table>
         </div>
