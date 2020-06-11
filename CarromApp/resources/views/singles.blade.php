@@ -160,8 +160,8 @@
                         <thead class="thead-dark">
                             <th>Date/Time</th>
                             <th>Player1</th>
-                            <th>Player2</th>
                             <th>Player1 Score</th>
+                            <th>Player2</th>
                             <th>Player2 Score</th>
                             <th>Winner</th>
                             <th>Action</th>
@@ -172,8 +172,8 @@
 
                             <td>{{$singles->created_at}}</td>
                             <td>{{$singles->player1}}</td>
-                            <td>{{$singles->player2}}</td>
                             <td>{{$singles->player1score}}</td>
+                            <td>{{$singles->player2}}</td>
                             <td>{{$singles->player2score}}</td>
                             @if(($singles->player1score)>($singles->player2score))
                             <td>{{$singles->player1}}</td>
